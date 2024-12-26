@@ -95,7 +95,7 @@ if __name__ == '__main__':
     # 未设置 sckey 则不进行推送
     if not sckey:
         print("Not push")
-        return 'Sever酱: 未配置sckey，无法进行消息推送。'
+        print ("Sever酱: 未配置sckey，无法进行消息推送。")
     else:
         #pushdeer = PushDeer(pushkey=sckey) 
         #pushdeer.send_text(title, desp=context) 
