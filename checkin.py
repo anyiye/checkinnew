@@ -76,10 +76,12 @@ if __name__ == '__main__':
                 message_status = "签到请求URL失败, 请检查..."
                 message_days = "error"
 
-            context += "账号: " + email + ", P: " + str(points) +", 剩余: " + message_days + " | "
+            context += "账号: " + email + ", P: " + str(points) +", 剩余: " + message_days + " | " + "成功" + {success} + ", 失败" + {fail}+", 重复" + {repeats}
+            context2 += P: " + str(points) +", 剩余: " + message_days
 
         # 推送内容 
-        title = f'Glados, 成功{success},失败{fail},重复{repeats}'
+        #title = f'Glados, 成功{success},失败{fail},重复{repeats}'
+        title = f'{context2}'
         print("Send Content:" + "\n", context)
         
     else:
