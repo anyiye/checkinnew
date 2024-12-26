@@ -109,19 +109,9 @@ if __name__ == '__main__':
         readkey = rsp.json()['data']['readkey']
         state_url = f'https://sctapi.ftqq.com/push?id={pushid}&readkey={readkey}'
 
-        count = 1
-        while True:
-            status_rsp = get(url=state_url)
-            result = status_rsp.json()['data']['wxstatus']
-            print ("查询消息推送是否成功ing : {count}")
-
-        if result:
-            print ("消息推送成功！")
-        elif count >= 60:   # 防止程序一直运行
-            print ("程序运行结束！推送结果未知！")
-        count += 1
-        sleep(1)
-
+        status_rsp = get(url=state_url)
+        result = status_rsp.json()['data']['wxstatus']
+        print ("消息推送成功！")
 
 
 
