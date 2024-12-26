@@ -8,7 +8,8 @@ on:
       - 'README.md'
       - 'imgs/'
   schedule:
-    - cron: '0 4,10 * * *'
+    #- cron: '0 4,10 * * *'
+    - cron: "5 20 * * *" # 分 时 日 月 星期
   watch:
     types: started
 
