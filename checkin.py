@@ -102,7 +102,7 @@ if __name__ == '__main__':
         print ("========================================")
         print ("Sever酱: 开始推送消息！")
         context = context.replace('\n', '\n\n')
-        url = f'https://sctapi.ftqq.com/{SendKey}.send'
+        url = f'https://sctapi.ftqq.com/{sckey}.send'
         data = {'title': title, 'desp': context, 'channel': 9}
         rsp = post(url=url, data=data)
         pushid = rsp.json()['data']['pushid']
