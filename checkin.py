@@ -16,6 +16,7 @@ if __name__ == '__main__':
     title = ""
     success, fail, repeats = 0, 0, 0        # 成功账号数量 失败账号数量 重复签到账号数量
     context = ""
+    context2 = ""
 
     # glados账号cookie 直接使用数组 如果使用环境变量需要字符串分割一下
     cookies = os.environ.get("COOKIES", []).split("&")
@@ -77,7 +78,7 @@ if __name__ == '__main__':
                 message_days = "error"
 
             context += "账号: " + email + ", P: " + str(points) +", 剩余: " + message_days + " | " + "成功" + str(success) + ", 失败" + str(fail) + ", 重复" + str(repeats)
-            context2 +="P: " + str(points) +", 剩余: " + message_days
+            context2 += "P: " + str(points) +", 剩余: " + message_days
 
         # 推送内容 
         #title = f'Glados, 成功{success},失败{fail},重复{repeats}'
