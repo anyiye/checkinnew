@@ -77,6 +77,7 @@ if __name__ == '__main__':
                 message_days = "error"
 
             context += "账号: " + email + ", P: " + str(points) +", 剩余: " + message_days + " | " + "成功" + str(success) + ", 失败" + str(fail) + ", 重复" + str(repeats)
+            context2 +="P: " + str(points) +", 剩余: " + message_days
 
         # 推送内容 
         #title = f'Glados, 成功{success},失败{fail},重复{repeats}'
