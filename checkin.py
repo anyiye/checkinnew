@@ -117,9 +117,9 @@ if __name__ == '__main__':
             logger.info(f'查询消息推送是否成功ing : {count}')
 
         if result:
-            return '消息推送成功！'
+            print ("消息推送成功！")
         elif count >= 60:   # 防止程序一直运行
-            return '程序运行结束！推送结果未知！'
+            print ("程序运行结束！推送结果未知！")
         count += 1
         sleep(1)
 
