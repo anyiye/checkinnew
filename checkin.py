@@ -2,7 +2,6 @@ import requests
 import json
 import os
 from time import sleep
-from logger import logger
 from requests import post, get
 from pypushdeer import PushDeer
 
@@ -100,8 +99,8 @@ if __name__ == '__main__':
         #pushdeer = PushDeer(pushkey=sckey) 
         #pushdeer.send_text(title, desp=context) 
         #增加Sever酱推送
-        logger.info('========================================')
-        logger.info('Sever酱: 开始推送消息！')
+        print ("========================================")
+        print ("Sever酱: 开始推送消息！")
         context = context.replace('\n', '\n\n')
         url = f'https://sctapi.ftqq.com/{SendKey}.send'
         data = {'title': title, 'desp': context, 'channel': 9}
@@ -114,7 +113,7 @@ if __name__ == '__main__':
         while True:
             status_rsp = get(url=state_url)
             result = status_rsp.json()['data']['wxstatus']
-            logger.info(f'查询消息推送是否成功ing : {count}')
+            print ("查询消息推送是否成功ing : {count}")
 
         if result:
             print ("消息推送成功！")
