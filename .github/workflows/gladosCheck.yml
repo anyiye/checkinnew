@@ -46,7 +46,8 @@ jobs:
         COOKIES: ${{ secrets.COOKIES }}
 
     - name: keep alive
-      uses: gautamkrishnar/keepalive-workflow@v1 # using the workflow with default settings
+      #uses: gautamkrishnar/keepalive-workflow@v1 # using the workflow with default settings
+      uses: gautamkrishnar/keepalive-workflow@306efe4fc63923e36571682b4f4b3e3eee8b6625
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@v2
       with:
