@@ -47,7 +47,7 @@ jobs:
 
     - name: keep alive
       #uses: gautamkrishnar/keepalive-workflow@v1 # using the workflow with default settings
-      uses: world-executed/keepalive-workflow
+      uses: efrecon/gh-action-keepalive
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@v2
       with:
