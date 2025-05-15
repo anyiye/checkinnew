@@ -45,9 +45,18 @@ jobs:
         SENDKEY: ${{ secrets.SENDKEY }}
         COOKIES: ${{ secrets.COOKIES }}
 
-    - name: keep alive
-      uses: gautamkrishnar/keepalive-workflow@v2 # using the workflow with default settings
-      #uses: efrecon/gh-action-keepalive@v1
+    #- name: keep alive
+    #  uses: gautamkrishnar/keepalive-workflow@v2 # using the workflow with default settings
+    #  #uses: efrecon/gh-action-keepalive@v1
+
+    - name: Keepalive (手动替代)
+      run: |
+        while true; do
+          echo "[$(date)] Workflow keepalive heartbeat..."
+          sleep 30
+        done &
+      shell: bash
+  
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@v2
       with:
